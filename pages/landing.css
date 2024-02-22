@@ -9,7 +9,7 @@
 
 .section__landing .main__text {
     font-family: var(--font-primary);
-    font-size: calc(var(--font-size-xxl) * 2);
+    font-size: calc(var(--font-size-xxl) * 2.3);
     color: var(--color-text-dark);
     margin-top: var(--padding-lg);
     font-weight: 400;

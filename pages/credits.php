@@ -6,7 +6,6 @@
     <title>Credits</title>
     <?php 
         include_once './utils/utils.php';
-        import_css('./components/Navbar.css');
         import_css('../assets/css/main.css');
         import_css('./credits-styles.css');
     ?>
@@ -21,7 +20,7 @@
     </div>
     <div class="cards">
         <div class="ayush-card card">
-            <img src="./bismay-photo.jpg" alt="">
+            <img src="../assets/images/bismay-image.jpg" alt="">
             <h2>Ayush Tripathy</h2>
             <div class="social-networks-ayush social-networks">
                 <span><a href=""><ion-icon name="logo-instagram"></ion-icon></a></span>
@@ -30,7 +29,7 @@
             </div>
         </div>
         <div class="bismay-card card">
-            <img src="./bismay-photo.jpg" alt="">
+            <img src="../assets/images/bismay-image.jpg" alt="">
             <h2>Bismay Sarangi</h2>
             <div class="social-networks-ayush social-networks">
                 <span><a href="https://www.instagram.com/b._.smay/"><ion-icon name="logo-instagram"></ion-icon></a></span>
@@ -39,7 +38,7 @@
             </div>
         </div>
         <div class="aryan-card card">
-            <img src="./bismay-photo.jpg" alt="">
+            <img src="../assets/images/bismay-image.jpg" alt="">
             <h2>Aryan Raj</h2>
             <div class="social-networks-ayush social-networks">
                 <span><a href=""><ion-icon name="logo-instagram"></ion-icon></a></span>
@@ -48,7 +47,7 @@
             </div>
         </div>
         <div class="nayab-card card">
-            <img src="./bismay-photo.jpg" alt="">
+            <img src="../assets/images/bismay-image.jpg" alt="">
             <h2>Nayab Mirza</h2>
             <div class="social-networks-ayush social-networks">
                 <span><a href=""><ion-icon name="logo-instagram"></ion-icon></a></span>
@@ -57,7 +56,7 @@
             </div>
         </div>
         <div class="srijay-card card">
-            <img src="./bismay-photo.jpg" alt="">
+            <img src="../assets/images/bismay-image.jpg" alt="">
             <h2>Srijayditya Nanda</h2>
             <div class="social-networks-ayush social-networks">
                 <span><a href=""><ion-icon name="logo-instagram"></ion-icon></a></span>
