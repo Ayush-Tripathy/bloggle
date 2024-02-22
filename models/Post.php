@@ -1,7 +1,7 @@
 <?php
     include_once '../database/db.php';
     include_once '../constants/db_vars.php';
-    
+
     class Post {
         public $id;
         public $user_id;
@@ -34,7 +34,7 @@
                                 $row['user_id'], 
                                 $row['title'], 
                                 $row['content'], 
-                                $row['img_url'], 
+                                $row['image_url'], 
                                 $row['likes_count'], 
                                 $row['comments_count'], 
                                 $row['created_at']);
@@ -54,7 +54,7 @@
                                 $row['user_id'], 
                                 $row['title'], 
                                 $row['content'], 
-                                $row['img_url'], 
+                                $row['image_url'], 
                                 $row['likes_count'], 
                                 $row['comments_count'], 
                                 $row['created_at']);
@@ -76,7 +76,7 @@
                             $row['user_id'], 
                             $row['title'], 
                             $row['content'], 
-                            $row['img_url'], 
+                            $row['image_url'], 
                             $row['likes_count'], 
                             $row['comments_count'], 
                             $row['created_at']);
@@ -86,7 +86,7 @@
         public function save() {
             global $dbc, $POSTS_TABLE, $ERROR_SAVING_POST;
             $query = "INSERT INTO $POSTS_TABLE (
-                user_id, title, content, img_url, likes_count, comments_count) 
+                user_id, title, content, image_url, likes_count, comments_count) 
                     VALUES (
                         $this->user_id, 
                         '$this->title', 

@@ -1,5 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #C8E4B2;
+    --color-primary-2: #9DBC98;
+    --color-secondary: #638889;
+    --color-success: #28a745;
+    --color-info: #17a2b8;
+    --color-warning: #ffc107;
+    --color-danger: #dc3545;
+    --color-light: #f8f9fa;
+    --color-dark: #343a40;
+    --color-black: #000;
+    --color-black-2: #1c1c1c;
+    --color-white: #fff;
+    --color-black-50: rgba(0, 0, 0, 0.5);
+
+    --color-text-dark: #000;
+    --color-text-light: #f8f9fa;
+
+    --font-primary: "Source Serif 4", serif;
+    --font-secondary: "Source Sans 3", sans-serif;
+    --font-inter: "Inter", sans-serif;
+
+    --font-size-xxl: 36px;
+    --font-size-xl: 24px;
+    --font-size-lg: 18px;
+    --font-size-md: 16px;
+    --font-size-sm: 14px;
+    --font-size-xs: 12px;
+    --font-size-xxs: 10px;
+
+    --padding-xxl: 200px;
+    --padding-xl: 150px;
+    --padding-lg: 100px;
+    --padding-md: 50px;
+    --padding-sm: 30px;
+    --padding-xs: 20px;
+    --padding-xxs: 10px;
+
+    --padding-lr-default: var(--padding-xl);
+
+    --flex-gap-lg: 30px;
+    --flex-gap-md: 20px;
+    --flex-gap-sm: 10px;
+}
+
+.btn__primary {
+    background-color: var(--color-black);
+    color: var(--color-text-light);
+    padding: calc(var(--padding-xxs) / 1.5) calc(var(--padding-xxs) * 1.7);
+    border: none;
+    border-radius: 15px;
+    font-family: var(--font-inter);
+    font-size: calc(var(--font-size-sm) + 2px);
+    transition: background-color 0.3s;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.btn__primary:hover {
+    background-color: var(--color-black-2);
+    cursor: pointer;
 }
