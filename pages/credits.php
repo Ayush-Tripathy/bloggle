@@ -22,7 +22,7 @@
         <div class="ayush-card card">
             <img src="../assets/images/bismay-image.jpg" alt="">
             <h2>Ayush Tripathy</h2>
-            <div class="social-networks-ayush social-networks">
+            <div class="social-networks">
                 <span><a href=""><ion-icon name="logo-instagram"></ion-icon></a></span>
                 <span><a href=""><ion-icon name="logo-linkedin"></ion-icon></a></span>
                 <span><a href=""><ion-icon name="logo-github"></ion-icon></a></span>
@@ -31,7 +31,7 @@
         <div class="bismay-card card">
             <img src="../assets/images/bismay-image.jpg" alt="">
             <h2>Bismay Sarangi</h2>
-            <div class="social-networks-ayush social-networks">
+            <div class="social-networks">
                 <span><a href="https://www.instagram.com/b._.smay/"><ion-icon name="logo-instagram"></ion-icon></a></span>
                 <span><a href="https://www.linkedin.com/in/bismay-sarangi-0804aa263/"><ion-icon name="logo-linkedin"></ion-icon></a></span>
                 <span><a href="https://github.com/bismaysarangi"><ion-icon name="logo-github"></ion-icon></a></span>
@@ -40,7 +40,7 @@
         <div class="aryan-card card">
             <img src="../assets/images/bismay-image.jpg" alt="">
             <h2>Aryan Raj</h2>
-            <div class="social-networks-ayush social-networks">
+            <div class="social-networks">
                 <span><a href=""><ion-icon name="logo-instagram"></ion-icon></a></span>
                 <span><a href=""><ion-icon name="logo-linkedin"></ion-icon></a></span>
                 <span><a href=""><ion-icon name="logo-github"></ion-icon></a></span>
@@ -49,7 +49,7 @@
         <div class="nayab-card card">
             <img src="../assets/images/bismay-image.jpg" alt="">
             <h2>Nayab Mirza</h2>
-            <div class="social-networks-ayush social-networks">
+            <div class="social-networks">
                 <span><a href=""><ion-icon name="logo-instagram"></ion-icon></a></span>
                 <span><a href=""><ion-icon name="logo-linkedin"></ion-icon></a></span>
                 <span><a href=""><ion-icon name="logo-github"></ion-icon></a></span>
@@ -58,7 +58,7 @@
         <div class="srijay-card card">
             <img src="../assets/images/bismay-image.jpg" alt="">
             <h2>Srijayditya Nanda</h2>
-            <div class="social-networks-ayush social-networks">
+            <div class="social-networks">
                 <span><a href=""><ion-icon name="logo-instagram"></ion-icon></a></span>
                 <span><a href=""><ion-icon name="logo-linkedin"></ion-icon></a></span>
                 <span><a href=""><ion-icon name="logo-github"></ion-icon></a></span>
