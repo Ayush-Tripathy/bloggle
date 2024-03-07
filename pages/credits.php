@@ -70,6 +70,9 @@
             </p>
         </div>
     </div>
+    <?php 
+        include_once './footer.php';
+    ?>
     <script>
         window.addEventListener('load', function () {
             var loadingOverlay = document.querySelector('.loading-overlay');

@@ -156,6 +156,9 @@
             </div>
         </div>
     </section>
+    <?php 
+        include_once './footer.php';
+    ?>
 
     <script src="script.js"></script>
 
