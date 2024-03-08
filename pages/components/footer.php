@@ -6,7 +6,7 @@
     <title>Footer</title>
     <?php 
         include_once './utils/utils.php';
-        import_css('./footer.css');
+        import_css('./components/footer.css');
     ?>
 </head>
 <body>
