@@ -9,6 +9,8 @@
 :root {
     --color-primary: #C8E4B2;
     --color-primary-2: #9DBC98;
+    --color-primary-3: #89B567;
+    --color-primary-light: #f1f6f3;
     --color-secondary: #638889;
     --color-success: #28a745;
     --color-info: #17a2b8;
@@ -20,6 +22,11 @@
     --color-black-2: #1c1c1c;
     --color-white: #fff;
     --color-black-50: rgba(0, 0, 0, 0.5);
+    --color-border: #e9ecef;
+    /* --color-border: #000; */
+    --color-gray: #716A6A;
+    --color-gray-2: #6c757d;
+    --color-gray-3: #495057;
 
     --color-text-dark: #000;
     --color-text-light: #f8f9fa;

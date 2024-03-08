@@ -1,5 +1,5 @@
 <?php
-    $navbar = 
+$navbar =
     "
         <nav class='navbar'>
             <div class='navbar__el'>
@@ -18,5 +18,4 @@
             </div>
         </nav>
     ";
-    echo $navbar;
-?>
+echo $navbar;

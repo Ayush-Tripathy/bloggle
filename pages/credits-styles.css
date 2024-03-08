@@ -15,9 +15,20 @@ body {
 /* Loading Animation */
 
 @keyframes fadeInOut {
-    0% { opacity: 0; transform: rotate(0deg); }
-    50% { opacity: 1; transform: rotate(180deg); }
-    100% { opacity: 0; transform: rotate(360deg); }
+    0% {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: rotate(180deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(360deg);
+    }
 }
 
 .loading-overlay {
@@ -30,7 +41,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; 
+    z-index: 9999;
 }
 
 .loading-spinner {
@@ -46,7 +57,7 @@ body {
     padding-left: 7.5%;
     padding-right: 7.5%;
     min-height: 250px;
-    width: 100vw; 
+    width: 100vw;
     /* font-family: "Open Sans", sans-serif; */
     /* font-family: "Exo 2", sans-serif; */
     font-family: "Source Serif 4", serif;
@@ -64,7 +75,7 @@ body {
     padding-left: 7.5%;
     padding-right: 7.5%;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 40px;
 }
@@ -74,11 +85,11 @@ body {
     width: calc(33.33% - 20px);
     border: none;
     display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     /* margin: 10px;  */
-    padding: 20px; 
+    padding: 20px;
     transition: transform 0.3s ease;
     animation: fadeIn 0.5s ease;
 }
@@ -87,6 +98,7 @@ body {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -98,11 +110,11 @@ body {
 }
 
 .card img {
-    width: 180px; 
+    width: 180px;
     height: 180px;
     object-fit: cover;
     border-radius: 50%;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
 
 .card img:hover {
@@ -110,9 +122,9 @@ body {
 }
 
 .card h2 {
-    margin-top: 10px; 
-    font-family: "Montserrat", sans-serif; 
-    font-size: 18px; 
+    margin-top: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
     font-weight: 500;
     margin-bottom: 10px;
 }
@@ -125,7 +137,7 @@ body {
     display: inline-flex;
     border: 1px solid black;
     border-radius: 50%;
-    margin-left: 10px; 
+    margin-left: 10px;
     height: 35px;
     width: 35px;
     display: flex;
@@ -146,7 +158,7 @@ body {
 .card a .github-icon {
     width: 20px;
     height: 20px;
-    transition: transform 0.3s ease, color 0.3s ease; 
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .card a ion-icon:hover {
@@ -160,7 +172,7 @@ body {
 .card a ion-icon[name="logo-linkedin"]:hover {
     color: rgb(0, 119, 181);
 }
-  
+
 .card a ion-icon[name="logo-github"]:hover {
     color: #171515;
 }
@@ -181,7 +193,7 @@ body {
         padding-left: 3px;
         padding-right: 3px;
     }
-    
+
     .card {
         width: 80%;
     }
@@ -252,4 +264,3 @@ body {
         border-right: 1px solid black;
     }
 }
-
