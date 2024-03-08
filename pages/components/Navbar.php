@@ -1,4 +1,5 @@
 <?php
+import_css('./components/Navbar.css');
 $navbar =
     "
         <nav class='navbar'>

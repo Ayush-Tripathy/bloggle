@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php
     include_once './utils/utils.php';
-    import_css('./components/Navbar.css');
     import_css('../assets/css/main.css');
     import_css('./landing.css');
     ?>
@@ -108,6 +107,9 @@
             <div class="posts__gutter is--2"></div>
         </div>
     </section>
+    <?php
+    include_once './components/footer.php';
+    ?>
 </body>
 
 </html>

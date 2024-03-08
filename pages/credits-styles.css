@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     padding: 0;
@@ -60,7 +61,8 @@ body {
     width: 100vw;
     /* font-family: "Open Sans", sans-serif; */
     /* font-family: "Exo 2", sans-serif; */
-    font-family: "Source Serif 4", serif;
+    /* font-family: "Source Serif 4", serif; */
+    font-family: "Exo", sans-serif;
     font-weight: 300;
     font-style: normal;
     background-color: #C8E4B2;
@@ -106,7 +108,7 @@ body {
 
 .card:hover {
     transform: scale(1.05);
-    background-color: #E6E6FA;
+    background-color: #E6E6FA !important;
 }
 
 .card img {

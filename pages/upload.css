@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    background-color: #C8E4B2;
+    font-family: var(--font-secondary);
+}
+
+.upload-container {
+    height: 60dvh;
+    width: 60dvw;
+    background-color: white;
+}
+
+.first-part {
+    padding-left: 10px;
+}
+
+.back-button {
+    font-size: 30px;
+}
+
+ion-icon {
+    color: black;
+    margin-bottom: -5px;
+}
+
+.input-container {
+    height: 80%;
+    width: 100%;
+    border: 1px solid var(--color-border);
+    padding: 20px;
+}
+
+.title-box input[type="text"] {
+    width: 100%;
+    font-size: var(--font-size-xl);
+}
+
+.caption-part {
+    margin-top: 30px;
+}
+
+.caption-part textarea {
+    width: 100%;
+    font-size: var(--font-size-lg);
+    resize: none;
+}
+
+.title-box input[type="text"],
+.caption-part textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: inherit;
+}
+
+.last-part {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.file-upload {
+    margin-top: 5%;
+    /* cursor: pointer; */
+}
+
+.file-upload-label {
+    cursor: pointer;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+button {
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: inherit;
+}
+
+@media only screen and (max-width: 768px) {
+    .caption-part {
+        padding-bottom: 30%;
+    }
+}
