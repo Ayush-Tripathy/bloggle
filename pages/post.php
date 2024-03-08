@@ -31,9 +31,10 @@
 
     <section class="first">
         <div class="first-container">
-            <img src="img1.jpg" alt="" class="blog-img">
+            <img class="blog-img" src="img1.jpg" alt="">
         </div>
     </section>
+
     <section class="second">
         <div class="card">
             <div class="profile">
@@ -54,13 +55,12 @@
                 itaque inventore blanditiis temporibus. Amet, earum?Lorem ipsum dolor sit amet consectetur adipisicing
                 elit. Ex totam ad quos nisi, aut rerum sapiente est corrupti quidem repellendus.
             </p>
-
         </div>
     </section>
 
     <section class="third">
         <div class="blog-body">
-            <h2 class="sub-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, harum.</h2> <br>
+            <h2 class="sub-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, harum.</h2><br>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil deserunt sint cupiditate rerum eos, et
                 illo
                 nesciunt optio quis expedita quo ducimus quas porro commodi dolor modi voluptate maxime sit officia.
@@ -82,11 +82,14 @@
                 non
                 ab sint suscipit sed atque quis corrupti sit asperiores dolorem illo ipsam molestias quae, iste,
                 reiciendis
-                totam. Eveniet beatae quae id exercitationem laboriosam, voluptas sint culpa odio ab rerum
+                totam. <br><br>
+                Eveniet beatae quae id exercitationem laboriosam, voluptas sint culpa odio ab
+                rerum
                 necessitatibus
                 nemo quasi natus minus consequuntur consectetur distinctio quod fugiat quam animi ea. Qui voluptatem a
                 mollitia molestias perferendis ipsum nemo debitis quas fuga laborum assumenda sed, nobis, velit pariatur
-                incidunt. Dolorem, aut? Pariatur tenetur officiis consequatur magni ratione maiores incidunt deserunt
+                incidunt.<br><br>Dolorem, aut? Pariatur tenetur officiis consequatur magni ratione
+                maiores incidunt deserunt
                 non ex
                 ducimus molestiae optio ipsum modi quos voluptas provident dolorum unde veritatis necessitatibus,
                 repellendus et ullam, excepturi impedit enim! Suscipit, impedit culpa! Quibusdam earum beatae unde,
@@ -112,57 +115,67 @@
     </section>
 
     <section class="fourth">
-        <h2 class="read-more-title">Popular blog posts</h2>
+        <h2 class="read-more-title">Related blog posts</h2>
+
         <div class="fourth-container">
-
             <div class="read-more">
-                <img class="read-more-img" src="img2.jpg" alt="">
+                <div class="read-more-img"><img src="img2.jpg" alt="">
+                </div>
+
                 <div class="read-more-body">
-                    <h2>Lorem ipsum dolor sit amet.</h2>
-                    <strong>Lorem ipsum dolor sit.</strong>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem id repellendus voluptas.
+                    <span class="username">dustinmoskovitz</span>
+                    <a href="#" class="read-more-heading">Lorem ipsum dolor sit amet.</a>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur libero impedit hic voluptas
+                        eligendi quae tenetur obcaecati atque doloribus earum porro dolores maxime nostrum doloremque
+                        molestias aspernatur reprehenderit, nulla id. Illo aliquid, quae architecto quidem vero
+                        molestias voluptatum aspernatur fugiat omnis quam consequatur blanditiis aperiam, repellendus
+                        veniam laboriosam obcaecati recusandae.
                     </p>
+                    <a href="#">Read More</a>
                 </div>
             </div>
 
             <div class="read-more">
-                <img class="read-more-img" src="img3.jpg" alt="">
+                <div class="read-more-img"><img src="img3.jpg" alt="">
+                </div>
+
                 <div class="read-more-body">
-                    <h2>Lorem ipsum dolor sit amet.</h2>
-                    <strong>Lorem ipsum dolor sit.</strong>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere unde sit beatae?
+                    <span class="username">dustinmoskovitz</span>
+                    <a href="#" class="read-more-heading">Lorem ipsum dolor sit amet.</a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut molestiae, laboriosam nostrum
+                        accusamus fugit totam ratione iste, provident cumque sunt debitis sit facilis porro aliquam
+                        reprehenderit magni dolor esse dignissimos deserunt exercitationem quibusdam id, sint sequi!
+                        Repudiandae ut, aut delectus minima optio deleniti excepturi voluptatibus unde, quisquam quidem
+                        provident assumenda.
                     </p>
+                    <a href="#">Read More</a>
                 </div>
             </div>
 
             <div class="read-more">
-                <img class="read-more-img" src="img4.jpg" alt="">
+                <div class="read-more-img"><img src="img4.jpg" alt="">
+                </div>
+
                 <div class="read-more-body">
-                    <h2>Lorem ipsum dolor sit amet.</h2>
-                    <strong>Lorem ipsum dolor sit.</strong>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus ratione esse.
+                    <span class="username">dustinmoskovitz</span>
+                    <a href="#" class="read-more-heading">Lorem ipsum dolor sit amet.</a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum laboriosam quibusdam possimus
+                        facere asperiores fugiat ipsum illum, assumenda necessitatibus est fuga dolorem rerum
+                        exercitationem enim, voluptatum excepturi reprehenderit eum consequatur beatae? Aspernatur,
+                        adipisci voluptates id dignissimos, fugiat sunt itaque nam ipsum, quod veritatis architecto fuga
+                        hic blanditiis neque quibusdam ea.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui consectetur saepe molestias et. Vel
+                        corrupti architecto nesciunt quia sint dicta ducimus debitis totam facere, ratione maiores ex
+                        consequuntur incidunt iure magni fugiat ut, tempore excepturi reiciendis suscipit magnam. Neque,
+                        illum?
                     </p>
+                    <a href="#">Read More</a>
                 </div>
             </div>
 
-            <div class="read-more">
-                <img class="read-more-img" src="img5.jpg" alt="">
-                <div class="read-more-body">
-                    <h2>Lorem ipsum dolor sit amet.</h2>
-                    <strong>Lorem ipsum dolor sit.</strong>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem nostrum exercitationem itaque.
-                    </p>
-                </div>
-            </div>
         </div>
     </section>
-
-    <?php 
-        include_once './footer.php';
-    ?>
-    
-    <script src="script.js"></script>
-
+    <?php include_once './footer.php'; ?>
 </body>
 
 </html>
