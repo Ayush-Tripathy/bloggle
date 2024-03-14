@@ -5,8 +5,8 @@
 }
 
 body {
-    height: 100dvh;
-    width: 100dvw;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,8 +15,8 @@ body {
 }
 
 .upload-container {
-    height: 60dvh;
-    width: 60dvw;
+    height: 52vh;
+    width: 60vw;
     background-color: white;
 }
 
@@ -33,10 +33,11 @@ ion-icon {
 }
 
 .input-container {
-    height: 80%;
+    height: 100%;
     width: 100%;
     border: 1px solid black;
     padding: 20px;
+    margin-bottom: 2%;
 }
 
 .title-box input[type="text"] {
@@ -60,7 +61,7 @@ ion-icon {
 }
 
 .last-part  {
-    height: 10%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,6 +80,10 @@ input[type="file"] {
     display: none;
 }
 
+#title::placeholder, #caption::placeholder {
+    font-size: 17px;
+}
+
 button {
     border: none;
     font-size: 20px;
@@ -89,5 +94,9 @@ button {
 @media only screen and (max-width: 768px) {
     .caption-part {
         padding-bottom: 30%;
+    }
+
+    #title::placeholder, #caption::placeholder {
+        font-size: 15px;
     }
 }

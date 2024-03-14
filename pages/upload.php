@@ -17,24 +17,26 @@
                 <a href="#"><ion-icon name="arrow-back-outline"></ion-icon></a>
             </div>
         </div>
-        <div class="input-container">
-            <div class="title-box">
-                <input type="text" name="title" id="title" placeholder="Share a captivating title..." required title="Enter the Title of your Blog">
+        <form action="">
+            <div class="input-container">
+                <div class="title-box">
+                    <input type="text" name="title" id="title" placeholder="Share a captivating title..." required title="Enter the Title of your Blog">
+                </div>
+                <div class="caption-part">
+                    <textarea name="caption" id="caption" cols="30" rows="10" placeholder="What's on your mind? Share your thoughts here..." required title="What do you want to talk about?"></textarea>
+                </div>
+                <div class="file-upload">
+                    <label for="fileToUpload" class="file-upload-label">
+                        <ion-icon name="cloud-upload-outline"></ion-icon>
+                        Choose File
+                    </label>
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+                </div>
             </div>
-            <div class="caption-part">
-                <textarea name="caption" id="caption" cols="30" rows="10" placeholder="What's on your mind? Share your thoughts here..." required title="What do you want to talk about?"></textarea>
+            <div class="last-part">
+                <button type="submit">Post</button>
             </div>
-            <div class="file-upload">
-                <label for="fileToUpload" class="file-upload-label">
-                    <ion-icon name="cloud-upload-outline"></ion-icon>
-                    Choose File
-                </label>
-                <input type="file" name="fileToUpload" id="fileToUpload">
-            </div>
-        </div>
-        <div class="last-part">
-            <button type="submit">Post</button>
-        </div>
+        </form>
     </div>
 
     <script>
