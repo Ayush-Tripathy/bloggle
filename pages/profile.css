@@ -1,0 +1,73 @@
+body{
+    background-color: rgb(255, 255, 255);
+    padding: 0%;
+    display: card;
+}
+
+@font-face {
+    font-family: SourceSerif4;
+    src: url(Source_Serif_4/static/SourceSerif4-Regular.ttf);
+}
+
+.container{
+    display: flex;
+    background-color: white;
+    width: 95%; 
+    height: 480px ;
+    border-radius: 0%;
+    border: solid 2px;
+    padding: 15px;
+    margin: 35px;
+}
+
+.innerContainer{
+    padding: 15px;
+}
+
+.card{
+    display: flex;
+    
+}
+
+.container img{
+    width: 450px;
+    height: 450px;
+    border: solid 1px;
+}
+
+h1{
+    font-size: 60px;
+    
+}
+
+h1, p{
+    font-family: var(--font-inter);
+    gap: var(--flex-gap-md);
+}
+
+.bio{
+    padding-top: 15px;
+}
+
+.button{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    color: azure;
+    background-color: black;
+    padding: 0 var(--padding-lr-default);
+    margin-top: 100px;
+    font-family: var(--font-inter);
+    gap: var(--flex-gap-md);
+    font-size: var(--font-size-lg);
+    border-radius: 25px;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+
+}
+
+
+
+
