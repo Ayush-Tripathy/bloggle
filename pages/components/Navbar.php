@@ -10,10 +10,10 @@ $navbar =
             </div>
 
             <div class='navbar__el'>
-                <a href='credits.php' class='navbar__el__text'>
+                <a href='../credits.php' class='navbar__el__text'>
                     Team
                 </a>
-                <a href='credits.php' class='btn__primary'>
+                <a href='../signup.php' class='btn__primary'>
                     Signup
                 </a>
             </div>
