@@ -30,8 +30,8 @@ include_once '../controllers/UserController.php';
                 <a href="landing.php"><ion-icon name="arrow-back-outline"></ion-icon></a>
             </div>
         </div>
-        <form action="">
-            <div class="input-container">
+        <div class="input-container">
+            <form action="">
                 <div class="title-box">
                     <input type="text" name="title" id="title" placeholder="Share a captivating title..." required title="Enter the Title of your Blog">
                 </div>
@@ -45,11 +45,11 @@ include_once '../controllers/UserController.php';
                     </label>
                     <input type="file" name="fileToUpload" id="fileToUpload">
                 </div>
-            </div>
-            <div class="last-part">
-                <button type="submit" id="upload-btn">Post</button>
-            </div>
-        </form>
+            </form>
+        </div>
+        <div class="last-part">
+            <button type="submit">Post</button>
+        </div>
     </div>
 
     <?php
