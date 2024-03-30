@@ -30,8 +30,12 @@ function savePost(
         $post->save();
     } catch (Exception $e) {
         return $ERROR_SAVING_POST;
-    }
-    ;
+    };
 
     return $POST_SAVED;
+}
+
+function getPosts(DateTime $start = null, DateTime $end = null, int $count = null)
+{
+    return Post::find_all($start, $end, $count);
 }
