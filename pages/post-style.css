@@ -1,16 +1,11 @@
-@font-face {
-    font-family: SourceSerif4;
-    src: url(Source_Serif_4/static/SourceSerif4-Regular.ttf);
-}
-
 * {
     padding: 0;
     margin: 0;
-    font-family: SourceSerif4;
+    font-family: var(--font-secondary);
 }
 
 header {
-    background: #adc099;
+    background: var(--color-primary);
 }
 
 .navbar {
@@ -21,6 +16,7 @@ header {
     margin: auto;
     max-width: 80vw;
     height: 70px;
+    border-bottom: none !important;
 }
 
 .blog-logo {
@@ -96,7 +92,7 @@ header {
     width: 45vw;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    border: 1px solid var(--color-border);
     height: fit-content;
     background-color: white;
     position: absolute;
@@ -114,10 +110,6 @@ header {
 }
 
 .profile-img {
-    display: block;
-    background-position: top;
-    background-size: cover;
-    background-image: url(profile.jpg);
     height: 50px;
     width: 50px;
     border-radius: 50%;

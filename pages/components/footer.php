@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer</title>
-    <?php 
-        include_once './utils/utils.php';
-        import_css('./components/footer.css');
-    ?>
-</head>
-<body>
+<?php
+include_once './utils/utils.php';
+import_css('./components/footer.css');
+?>
+
+<footer>
     <div class="footer-content">
         <div class="footer-logo">
             <h1>BLOGGLE</h1>
@@ -27,5 +21,4 @@
     <div class="footer-ending-line">
         Designed and Developed with 💙 by Team Bloggle
     </div>
-</body>
-</html>
+</footer>

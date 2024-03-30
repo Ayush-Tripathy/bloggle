@@ -1,5 +1,4 @@
-body{
-
+body {
     background-color: rgb(255, 255, 255);
     padding: 0%;
     display: card;
@@ -11,12 +10,12 @@ body{
     src: url(Source_Serif_4/static/SourceSerif4-Regular.ttf);
 }
 
-.container{
 
+.container {
     display: flex;
     background-color: white;
-    width: 95%; 
-    height: 480px ;
+    width: 95%;
+    height: 480px;
     border-radius: 0%;
     border: solid 1px;
     padding: 15px;
@@ -25,51 +24,45 @@ body{
 
 }
 
-.innerContainer{
 
+.innerContainer {
     padding: 15px;
-
 }
 
-.card{
 
+.card {
     display: flex;
-    
 }
 
-.container img{
-
+.container img {
     width: 450px;
     height: 450px;
     border: solid 1px;
-
 }
 
-h1{
-
+h1 {
     font-size: 60px;
-    
 }
 
-h1, p{
-
+h1,
+p {
     font-family: var(--font-inter);
     gap: var(--flex-gap-md);
-
 }
 
-.bio{
+
+.bio {
 
     padding-top: 15px;
 
 }
 
-.button{
-    
+.button {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     color: azure;
     background-color: black;
     padding: 0 var(--padding-lr-default);
@@ -83,12 +76,12 @@ h1, p{
 
 }
 
-.post_heading{
 
+.post_heading {
     display: flex;
     background-color: white;
-    width: 95%; 
-    height: 60px ;
+    width: 95%;
+    height: 60px;
     border-radius: 0%;
     border: solid 1px;
     padding: 15px;
@@ -97,9 +90,8 @@ h1, p{
 
 }
 
-.content_of_the_box{
-
-    margin-left:45%;
+.content_of_the_box {
+    margin-left: 45%;
     margin-bottom: 3px;
     font-family: var(--font-inter);
     gap: var(--flex-gap-md);
@@ -204,5 +196,3 @@ h1, p{
     transition: all ease 0.3s;
 
 }
-
-

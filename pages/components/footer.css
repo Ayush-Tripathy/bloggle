@@ -15,7 +15,7 @@
 
 .footer-content {
     min-height: 170px;
-    width: 100dvw;
+    width: 100%;
     font-family: 'Montserrat', sans-serif;
     background-color: #C8E4B2;
     color: black;
@@ -23,7 +23,6 @@
     flex-direction: row;
     align-items: center;
     padding-left: 10%;
-    /* padding-top: 30px; */
 }
 
 .footer-pages-links {
@@ -53,4 +52,3 @@
     color: #8A2BE2;
     text-decoration: underline;
 }
-
