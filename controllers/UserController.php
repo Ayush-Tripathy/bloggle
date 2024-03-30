@@ -1,20 +1,23 @@
 <?php
+$ONE_DAY = 60 * 60 * 24;
+session_set_cookie_params($ONE_DAY);
+session_set_cookie_params(0, '/');
+session_start();
+
 include_once '../constants/db_vars.php';
 include_once '../models/User.php';
 include_once '../services/UserService.php';
 include_once '../pages/utils/utils.php';
 
-$ONE_DAY = 60 * 60 * 24;
-session_set_cookie_params($ONE_DAY);
-session_start();
+
 
 function registerUser(
-    $username,
-    $password,
-    $email,
-    $fullname,
-    $bio,
-    $profile_pic_data
+    string $username,
+    string $password,
+    string $email,
+    string $fullname,
+    ?string $bio,
+    ?string $profile_pic_data
 ) {
 
 
@@ -48,16 +51,27 @@ function registerUser(
 
 function loginUser($username, $password)
 {
-    global $USER_DOES_NOT_EXIST;
+    global $USER_DOES_NOT_EXIST, $INVALID_CREDENTIALS;
     $user = User::find_by_username($username);
     if (!$user) {
         return $USER_DOES_NOT_EXIST;
     }
     if (password_verify($password, $user->password)) {
-        $_SESSION['user'] = $user;
+
+        $user_to_set = [
+            'id' => $user->id,
+            'username' => $user->username,
+            'email' => $user->email,
+            'fullname' => $user->fullname,
+            'bio' => $user->bio,
+            'posts_count' => $user->posts_count,
+            'profile_pic_url' => $user->profile_pic_url
+        ];
+
+        $_SESSION['user'] = $user_to_set;
         return $user;
     }
-    return null;
+    return $INVALID_CREDENTIALS;
 }
 
 function logoutUser()
