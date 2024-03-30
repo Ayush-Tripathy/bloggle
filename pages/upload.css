@@ -1,3 +1,4 @@
+
 * {
     padding: 0;
     margin: 0;
@@ -64,6 +65,7 @@ ion-icon {
     background-color: inherit;
 }
 
+
 .last-part {
     height: 10%;
     display: flex;
@@ -83,6 +85,7 @@ ion-icon {
 input[type="file"] {
     display: none;
 }
+
 
 #title::placeholder,
 #caption::placeholder {
@@ -106,3 +109,4 @@ button {
         font-size: 15px;
     }
 }
+

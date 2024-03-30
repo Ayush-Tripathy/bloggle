@@ -48,6 +48,7 @@ include_once '../controllers/UserController.php';
             </form>
         </div>
         <div class="last-part">
+
             <button type="submit" id="upload-btn">Post</button>
         </div>
     </div>

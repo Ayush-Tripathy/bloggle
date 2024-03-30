@@ -1,5 +1,4 @@
 body {
-
     background-color: rgb(255, 255, 255);
     padding: 0%;
     display: card;
@@ -11,8 +10,8 @@ body {
     src: url(Source_Serif_4/static/SourceSerif4-Regular.ttf);
 }
 
-.container {
 
+.container {
     display: flex;
     background-color: white;
     width: 95%;
@@ -25,39 +24,32 @@ body {
 
 }
 
+
 .innerContainer {
-
     padding: 15px;
-
 }
 
+
 .card {
-
     display: flex;
-
 }
 
 .container img {
-
     width: 450px;
     height: 450px;
     border: solid 1px;
-
 }
 
 h1 {
-
     font-size: 60px;
-
 }
 
 h1,
 p {
-
     font-family: var(--font-inter);
     gap: var(--flex-gap-md);
-
 }
+
 
 .bio {
 
@@ -84,8 +76,8 @@ p {
 
 }
 
-.post_heading {
 
+.post_heading {
     display: flex;
     background-color: white;
     width: 95%;
@@ -99,7 +91,6 @@ p {
 }
 
 .content_of_the_box {
-
     margin-left: 45%;
     margin-bottom: 3px;
     font-family: var(--font-inter);
