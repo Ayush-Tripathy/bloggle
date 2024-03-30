@@ -5,7 +5,7 @@
 }
 
 header {
-    background: #adc099;
+    background: var(--color-primary);
 }
 
 .navbar {
@@ -16,6 +16,7 @@ header {
     margin: auto;
     max-width: 80vw;
     height: 70px;
+    border-bottom: none !important;
 }
 
 .blog-logo {
@@ -109,10 +110,6 @@ header {
 }
 
 .profile-img {
-    display: block;
-    background-position: top;
-    background-size: cover;
-    background-image: url(profile.jpg);
     height: 50px;
     width: 50px;
     border-radius: 50%;

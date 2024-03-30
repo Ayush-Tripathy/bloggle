@@ -1,3 +1,6 @@
+<?php
+include_once '../controllers/UserController.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +17,53 @@
 
 <body>
     <?php include_once './components/Navbar.php'; ?>
+
+    <?php
+    // check if user is logged in
+    if (isset($_SESSION['user'])) {
+        $user = $_SESSION['user'];
+        echo "<script>console.log('User is logged in as: " . $user['username'] . "')</script>";
+    } else {
+        echo "<script>console.log('User is not logged in')</script>";
+    }
+    ?>
+
+    <?php
+    include_once '../controllers/PostController.php';
+
+    function post_card(Post $post)
+    {
+        $user = User::find_by_id($post->user_id);
+        $username = $user->username;
+        $profile_pic = $user->profile_pic_url;
+        $post_id = $post->id;
+        $title = $post->title;
+        $content = $post->content;
+        $img_url = $post->img_url;
+        $created_at = $post->created_at;
+        $date = date('M d, Y', strtotime($created_at));
+
+        $len = strlen($content);
+        if ($len > 250) {
+            $content = substr($content, 0, 250) . "...";
+        }
+
+        echo "<a class='post__card' href='post.php?id=$post_id'>
+                <div class='post__card_user_div' href='login.php'>
+                    <img src='$profile_pic' alt='' class='post__card_profile_pic'>
+                    <span class='post__card_username'>
+                        $username
+                    </span>
+                </div>
+                <img src='$img_url' alt='' class='post__image'>
+                <h3 class='post__title'>
+                    $title
+                </h3>
+                <span class='post__content'>" . $content . "</span>
+                <span class='date__ribbon'>$date</span>
+            </a>";
+    };
+    ?>
 
     <section class="section__landing">
         <h1 class="main__text">
@@ -36,57 +86,12 @@
             <div class="posts__gutter is--1"></div>
             <div class="posts__container">
                 <div class="posts__column">
-                    <div class="post__card">
-                        <div class="post__card_user_div">
-                            <img src="../../assets/images/dragon.png" alt="" class="post__card_profile_pic">
-                            <span class="post__card_username">
-                                Carter Gibson
-                            </span>
-                        </div>
-                        <img src="../../assets/images/i2.jpg" alt="" class="post__image">
-                        <h3 class="post__title">
-                            I tasted the future of EV charging and it was
-                            delicious.
-                        </h3>
-                        <p class="post__content">Electrify America's newest, indoor charging concept reimagines
-                            the electric vehicle experience for the better. And I love it.</p>
-
-                        <span class="date__ribbon">Jan 9, 2024</span>
-                    </div>
-                    <div class="post__card">
-                        <div class="post__card_user_div">
-                            <img src="../../assets/images/dragon.png" alt="" class="post__card_profile_pic">
-                            <span class="post__card_username">
-                                Carter Gibson
-                            </span>
-                        </div>
-                        <img src="../../assets/images/i2.jpg" alt="" class="post__image">
-                        <h3 class="post__title">
-                            I tasted the future of EV charging and it was
-                            delicious.
-                        </h3>
-                        <p class="post__content">Electrify America's newest, indoor charging concept reimagines
-                            the electric vehicle experience for the better. And I love it.</p>
-
-                        <span class="date__ribbon">Jan 9, 2024</span>
-                    </div>
-                    <div class="post__card">
-                        <div class="post__card_user_div">
-                            <img src="../../assets/images/dragon.png" alt="" class="post__card_profile_pic">
-                            <span class="post__card_username">
-                                Carter Gibson
-                            </span>
-                        </div>
-                        <img src="../../assets/images/i2.jpg" alt="" class="post__image">
-                        <h3 class="post__title">
-                            I tasted the future of EV charging and it was
-                            delicious.
-                        </h3>
-                        <p class="post__content">Electrify America's newest, indoor charging concept reimagines
-                            the electric vehicle experience for the better. And I love it.</p>
-
-                        <span class="date__ribbon">Jan 9, 2024</span>
-                    </div>
+                    <?php
+                    $posts = getPostsFromBefore();
+                    foreach ($posts as $post) {
+                        post_card($post);
+                    }
+                    ?>
                 </div>
                 <div class="sidepanel">
                     <div class="get__started">

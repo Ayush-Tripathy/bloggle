@@ -75,3 +75,10 @@
     background-color: var(--color-black-2);
     cursor: pointer;
 }
+
+.error {
+    color: var(--color-danger);
+    font-size: var(--font-size-sm);
+    font-family: var(--font-inter);
+    font-weight: 400;
+}
