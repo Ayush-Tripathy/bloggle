@@ -25,10 +25,26 @@ class Post
         $this->created_at = $created_at;
     }
 
-    public static function find_all()
+    public static function find_all(DateTime $start = NULL, DateTime $end = NULL, int $max = NULL)
     {
         global $dbc, $POSTS_TABLE, $ERROR_QUERYING_DB;
-        $query = "SELECT * FROM $POSTS_TABLE";
+
+        $limit = isset($max) ? " LIMIT $max" : NULL;
+        $start = isset($start) ? $start->format('Y-m-d H:i:s') : NULL;
+        $end = isset($end) ? $end->format('Y-m-d H:i:s') : NULL;
+
+        $query = "";
+        if (isset($start) && isset($end)) {
+            $query = "SELECT * FROM $POSTS_TABLE WHERE created_at BETWEEN '$start' AND '$end'" . "ORDER BY created_at DESC" . $limit;
+        } else {
+            $start = isset($start) ? " WHERE created_at > '$start'" : "";
+            $end = isset($end) ? " WHERE created_at < '$end'" : "";
+
+            $query = "SELECT * FROM $POSTS_TABLE" . $start . $end . " ORDER BY created_at DESC" . $limit;
+        }
+
+        // $query = "SELECT * FROM $POSTS_TABLE" . "ORDER BY created_at DESC" . $limit;
+        // echo "EXECUTING QUERY: $query<br>";
         $result = mysqli_query($dbc, $query) or die($ERROR_QUERYING_DB);
         $posts = [];
         while ($row = mysqli_fetch_array($result)) {

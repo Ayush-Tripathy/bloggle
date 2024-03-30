@@ -1,3 +1,6 @@
+<?php
+include_once '../controllers/UserController.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,10 +16,18 @@
 </head>
 
 <body>
+    <?php
+    if (isset($_SESSION['user'])) {
+        $user = $_SESSION['user'];
+        echo "<script>console.log('User is logged in as: " . $user['username'] . "')</script>";
+    } else {
+        echo "<script>window.location.href = 'login.php';</script>";
+    }
+    ?>
     <div class="upload-container">
         <div class="first-part">
             <div class="back-button">
-                <a href="#"><ion-icon name="arrow-back-outline"></ion-icon></a>
+                <a href="landing.php"><ion-icon name="arrow-back-outline"></ion-icon></a>
             </div>
         </div>
         <form action="">
@@ -36,12 +47,68 @@
                 </div>
             </div>
             <div class="last-part">
-                <button type="submit">Post</button>
+                <button type="submit" id="upload-btn">Post</button>
             </div>
         </form>
     </div>
 
-    <script>
+    <?php
+    include_once '../controllers/PostController.php';
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        echo "POST request received";
+
+        $imageUrl = $_POST['imageurl'];
+        $postTitle = $_POST['title'];
+        $postContent = $_POST['content'];
+
+        $ret = uploadPost($postTitle, $postContent, $imageUrl);
+        if ($ret) {
+            echo "POST uploaded successfully";
+            echo "<script>console.log('$ret');</script>";
+            // echo "<script>window.location.href = 'landing.php';</script>";
+        } else {
+            echo "POST upload failed";
+            echo "<script>console.log('Post upload failed');</script>";
+        }
+    }
+    ?>
+
+    <script type="module">
+        import {
+            uploadImage
+        } from '../scripts/firebase_upload.js'
+
+        const fileInput = document.getElementById('fileToUpload');
+        const uploadBtn = document.getElementById('upload-btn');
+        const postTitle = document.getElementById('title');
+        const postCaption = document.getElementById('caption');
+
+        uploadBtn.addEventListener('click', handleUpload);
+
+        async function handleUpload(event) {
+            event.preventDefault();
+
+            if (!postTitle.value || !postCaption.value) {
+                alert('Please fill in all the fields');
+                return;
+            }
+
+            if (!fileInput.files.length) {
+                alert('No file selected');
+                return;
+            }
+
+            // const file = fileInput.files[0];
+            const ret = await uploadImage(fileInput, "upload.php", postTitle.value, postCaption.value);
+
+            if (ret) {
+                console.log('Image uploaded successfully');
+            } else {
+                console.log('Image upload failed');
+            }
+
+        }
+
         const titleInput = document.getElementById('title');
         const captionTextarea = document.getElementById('caption');
 
@@ -64,7 +131,6 @@
 
         typeWriter(titleInput, titlePlaceholder, 100);
         typeWriter(captionTextarea, captionPlaceholder, 50);
-
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
