@@ -38,16 +38,16 @@
             </div>
         </div>
         <div class="aryan-card card">
-            <img src="../assets/images/bismay-image.jpg" alt="">
+            <img src="../assets/images/aryan-image.jpg" alt="">
             <h2>Aryan Raj</h2>
             <div class="social-networks">
-                <span><a href=""><ion-icon name="logo-instagram"></ion-icon></a></span>
-                <span><a href=""><ion-icon name="logo-linkedin"></ion-icon></a></span>
-                <span><a href=""><ion-icon name="logo-github"></ion-icon></a></span>
+                <span><a href="https://www.instagram.com/typically._.aryan"><ion-icon name="logo-instagram"></ion-icon></a></span>
+                <span><a href="https://www.linkedin.com/in/aryan-raj-4354a023b/"><ion-icon name="logo-linkedin"></ion-icon></a></span>
+                <span><a href="https://github.com/Aryan-474"><ion-icon name="logo-github"></ion-icon></a></span>
             </div>
         </div>
         <div class="nayab-card card">
-            <img src="../assets/images/bismay-image.jpg" alt="">
+            <img src="../assets/images/nayab-image.jpg" alt="">
             <h2>Nayab Mirza</h2>
             <div class="social-networks">
                 <span><a href=""><ion-icon name="logo-instagram"></ion-icon></a></span>
@@ -56,7 +56,7 @@
             </div>
         </div>
         <div class="srijay-card card">
-            <img src="../assets/images/bismay-image.jpg" alt="">
+            <img src="../assets/images/srijay-image.jpg" alt="">
             <h2>Srijayditya Nanda</h2>
             <div class="social-networks">
                 <span><a href=""><ion-icon name="logo-instagram"></ion-icon></a></span>
