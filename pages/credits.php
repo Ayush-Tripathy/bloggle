@@ -20,12 +20,12 @@
     </div>
     <div class="cards">
         <div class="ayush-card card">
-            <img src="../assets/images/bismay-image.jpg" alt="">
+            <img src="../assets/images/ayush-image.jpg" alt="">
             <h2>Ayush Tripathy</h2>
             <div class="social-networks">
-                <span><a href=""><ion-icon name="logo-instagram"></ion-icon></a></span>
-                <span><a href=""><ion-icon name="logo-linkedin"></ion-icon></a></span>
-                <span><a href=""><ion-icon name="logo-github"></ion-icon></a></span>
+                <span><a href="https://www.instagram.com/sparrow9088"><ion-icon name="logo-instagram"></ion-icon></a></span>
+                <span><a href="https://www.linkedin.com/in/ayushtripathy547/"><ion-icon name="logo-linkedin"></ion-icon></a></span>
+                <span><a href="https://github.com/Ayush-Tripathy"><ion-icon name="logo-github"></ion-icon></a></span>
             </div>
         </div>
         <div class="bismay-card card">
