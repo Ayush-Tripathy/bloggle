@@ -50,17 +50,17 @@
             <img src="../assets/images/nayab-image.jpg" alt="">
             <h2>Nayab Mirza</h2>
             <div class="social-networks">
-                <span><a href=""><ion-icon name="logo-instagram"></ion-icon></a></span>
+                <span><a href="https://www.instagram.com/_.nayabmirza._/"><ion-icon name="logo-instagram"></ion-icon></a></span>
                 <span><a href=""><ion-icon name="logo-linkedin"></ion-icon></a></span>
-                <span><a href=""><ion-icon name="logo-github"></ion-icon></a></span>
+                <span><a href="https://github.com/Nayab-Mirza"><ion-icon name="logo-github"></ion-icon></a></span>
             </div>
         </div>
         <div class="srijay-card card">
             <img src="../assets/images/srijay-image.jpg" alt="">
             <h2>Srijayditya Nanda</h2>
             <div class="social-networks">
-                <span><a href=""><ion-icon name="logo-instagram"></ion-icon></a></span>
-                <span><a href=""><ion-icon name="logo-linkedin"></ion-icon></a></span>
+                <span><a href="https://www.instagram.com/srijayditya"><ion-icon name="logo-instagram"></ion-icon></a></span>
+                <span><a href="https://www.linkedin.com/in/srijay-nanda-667305276/"><ion-icon name="logo-linkedin"></ion-icon></a></span>
                 <span><a href=""><ion-icon name="logo-github"></ion-icon></a></span>
             </div>
         </div>
