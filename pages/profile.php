@@ -8,6 +8,7 @@ include_once '../controllers/UserController.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <?php
     include_once './utils/utils.php';
     import_css('./components/Navbar.css');
@@ -21,21 +22,67 @@ include_once '../controllers/UserController.php';
 
     <?php include_once './components/Navbar.php'; ?>
 
+    <?php
+    include_once '../controllers/UserController.php';
+    include_once '../models/User.php';
+    include_once '../models/Post.php';
+
+    if (!isset($_GET['user'])) {
+        return;
+    }
+
+    $username = $_GET['user'];
+    $user = User::find_by_username($username);
+    $fullname = $user->fullname;
+    $bio = $user->bio;
+    $profile_pic = $user->profile_pic_url;
+    $created_at = $user->created_at;
+    $date = date('M d, Y', strtotime($created_at));
+    $posts_count = $user->posts_count;
+    $posts = Post::find_by_user_id($user->id);
+
+
+    function read_more_card($post_id, $img_url, $username, $title, $content, $date)
+    {
+        return "
+        <a href='post.php?id=$post_id'>
+        <div class='read-more' href='post.php?id=$post_id'>
+            <div class='read-more-img'><img src='$img_url' alt=''>
+            </div>
+
+            <div class='read-more-body'>
+                <a href='post.php?id=$post_id' class='read-more-heading'>$title</a>
+                <p>$content</p>
+            </div>
+        </div>
+        </a>
+        ";
+    }
+
+    $all_posts = Post::find_by_user_id($user->id);
+    ?>
+
     <div class="first-part">
-    
+
         <div class="profile-header">
             <div class="image-section">
-                <img src="./catttttt.jpeg" alt="">
+                <img src="<?php echo $profile_pic; ?>" alt="<?php echo $username; ?>">
             </div>
             <div class="about-section">
                 <div class="name">
-                    Bismay Sarangi
+                    <?php echo $fullname; ?>
                 </div>
                 <div class="userid">
-                    b._.smay
+                    @<?php echo $username; ?>
                 </div>
-                <div class="bio">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus eveniet porro reprehenderit aliquam similique reiciendis officia distinctio doloremque corrupti! Quae, quo hic culpa reiciendis, accusantium aperiam voluptas soluta illo nisi, saepe non expedita dicta dignissimos! Natus nobis quia, cum modi ad eligendi quasi totam aut consequuntur molestias excepturi enim soluta.
+                <textarea id="bio" class="bio" contenteditable="false" readonly>
+                    <?php echo $bio; ?>
+                </textarea>
+                <div class="edit-bio" id="edit-bio">
+                    <span class="material-symbols-outlined">
+                        edit_square
+                    </span>
+                    <span>Edit Bio</span>
                 </div>
             </div>
         </div>
@@ -119,119 +166,11 @@ include_once '../controllers/UserController.php';
     <section class="three">
 
         <div class="post_grid">
-
-
-            <div class="read-more">
-
-                <div class="read-more-img"><img src="DP.jpg" alt="">
-
-
-                </div>
-
-                <div class="read-more-body">
-
-                    <!-- <span class="username">dustinmoskovitz</span> -->
-
-                    <a href="#" class="read-more-heading">Lorem ipsum dolor sit amet.</a>
-
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur libero impedit hic voluptas
-                        eligendi quae tenetur obcaecati atque doloribus earum porro dolores maxime nostrum doloremque
-                        molestias aspernatur reprehenderit, nulla id. Illo aliquid, quae architecto quidem vero
-                        molestias voluptatum aspernatur fugiat omnis quam consequatur blanditiis aperiam, repellendus
-                        veniam laboriosam obcaecati recusandae.
-
-                    </p>
-
-                    <!-- <a href="#">Read More</a> -->
-
-                </div>
-
-            </div>
-
-            <div class="read-more">
-
-                <div class="read-more-img"><img src="DP.jpg" alt="">
-
-                </div>
-
-                <div class="read-more-body">
-
-
-                    <!-- <span class="username">dustinmoskovitz</span> -->
-
-                    <a href="#" class="read-more-heading">Lorem ipsum dolor sit amet.</a>
-
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut molestiae, laboriosam nostrum
-                        accusamus fugit totam ratione iste, provident cumque sunt debitis sit facilis porro aliquam
-                        reprehenderit magni dolor esse dignissimos deserunt exercitationem quibusdam id, sint sequi!
-                        Repudiandae ut, aut delectus minima optio deleniti excepturi voluptatibus unde, quisquam quidem
-                        provident assumenda.
-                    </p>
-
-                    <!-- <a href="#">Read More</a> -->
-
-                </div>
-
-            </div>
-
-            <div class="read-more">
-
-                <div class="read-more-img"><img src="DP.jpg" alt="">
-                </div>
-
-                <div class="read-more-body">
-
-                    <!-- <span class="username">dustinmoskovitz</span> -->
-
-                    <a href="#" class="read-more-heading">Lorem ipsum dolor sit amet.</a>
-
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum laboriosam quibusdam possimus
-                        facere asperiores fugiat ipsum illum, assumenda necessitatibus est fuga dolorem rerum
-                        exercitationem enim, voluptatum excepturi reprehenderit eum consequatur beatae? Aspernatur,
-                        adipisci voluptates id dignissimos, fugiat sunt itaque nam ipsum, quod veritatis architecto fuga
-                        hic blanditiis neque quibusdam ea.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui consectetur saepe molestias et. Vel
-                        corrupti architecto nesciunt quia sint dicta ducimus debitis totam facere, ratione maiores ex
-                        consequuntur incidunt iure magni fugiat ut, tempore excepturi reiciendis suscipit magnam. Neque,
-                        illum?
-                    </p>
-
-
-                    <!-- <a href="#">Read More</a> -->
-
-                </div>
-
-
-            </div>
-
-            <div class="read-more">
-
-                <div class="read-more-img"><img src="DP.jpg" alt="">
-
-                </div>
-
-                <div class="read-more-body">
-
-                    <!-- <span class="username">dustinmoskovitz</span> -->
-
-                    <a href="#" class="read-more-heading">Lorem ipsum dolor sit amet.</a>
-
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut molestiae, laboriosam nostrum
-                        accusamus fugit totam ratione iste, provident cumque sunt debitis sit facilis porro aliquam
-                        reprehenderit magni dolor esse dignissimos deserunt exercitationem quibusdam id, sint sequi!
-                        Repudiandae ut, aut delectus minima optio deleniti excepturi voluptatibus unde, quisquam quidem
-                        provident assumenda.
-                    </p>
-
-                    <!-- <a href="#">Read More</a> -->
-
-                </div>
-
-            </div>
-
-
-
-
+            <?php
+            foreach ($all_posts as $post) {
+                echo read_more_card($post->id, $post->img_url, $username, $post->title, $post->content, $post->created_at);
+            }
+            ?>
         </div>
 
     </section>
@@ -242,7 +181,50 @@ include_once '../controllers/UserController.php';
 
     ?>
 
+    <script>
+        const editBio = document.getElementById('edit-bio');
+        const bio = document.getElementById('bio');
 
+        let isEditing = false;
+        let prevBio = bio.value;
+        editBio.addEventListener('click', async () => {
+
+            let editingHtml = `<span class="material-symbols-outlined">
+                                edit_square
+                                </span>
+                                <span>Edit Bio</span>`;
+            let doneHtml = `<span class="material-symbols-outlined">
+                                save
+                            </span>
+                            <span>Save Bio</span>`;
+
+            isEditing = !isEditing;
+            if (isEditing) {
+                bio.readOnly = false;
+                bio.contentEditable = true;
+                bio.focus();
+                editBio.innerHTML = doneHtml;
+                return;
+            }
+            bio.readOnly = true;
+            bio.contentEditable = false;
+            editBio.innerHTML = editingHtml;
+
+            let newBio = bio.value;
+            if (newBio === prevBio) {
+                return;
+            }
+            prevBio = newBio;
+            const formData = new FormData();
+            formData.append('bio', newBio);
+            formData.append('username', '<?php echo $username; ?>');
+
+            await fetch('save_bio.php', {
+                method: 'POST',
+                body: formData
+            });
+        });
+    </script>
 </body>
 
 </html>
