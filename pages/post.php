@@ -1,7 +1,3 @@
-<?php
-include_once '../controllers/UserController.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,18 +5,22 @@ include_once '../controllers/UserController.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLOGGLE</title>
-    <!-- <link rel="stylesheet" href="post-style.css"> -->
-    <?php
-    include_once './utils/utils.php';
-    import_css('../assets/css/main.css');
-    import_css('./post-style.css');
+    <link rel="stylesheet" href="post-style.css">
+    <?php 
+        include_once './utils/utils.php';
+        import_css('../assets/css/main.css');
+        import_css('./credits-styles.css');
     ?>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <!-- <header class="header">
+    <header class="header">
         <nav class="navbar">
-            <span class="blog-logo"><img width="50" src="logo.svg" alt=""></span>
+            <div class="blog-logo"><img width="50" src="logo.svg" alt=""></div>
+        
             <div>
                 <span><a href="" class="btn">HOME</a></span>
                 <span><a href="" class="btn">DISCOVER</a></span>
@@ -29,90 +29,93 @@ include_once '../controllers/UserController.php';
 
             </div>
         </nav>
-    </header> -->
-    <header>
-        <?php
-        include_once './components/Navbar.php';
-        ?>
     </header>
 
     <div class="separation"></div>
 
-    <?php
-    include_once '../controllers/PostController.php';
-    include_once '../models/Post.php';
-
-    if (!isset($_GET['id'])) {
-        return;
-    }
-
-    $post_id = $_GET['id'];
-    $post = Post::find_by_id($post_id);
-    $user = User::find_by_id($post->user_id);
-    $username = $user->username;
-    $fullname = $user->fullname;
-    $profile_pic = $user->profile_pic_url;
-    $title = $post->title;
-    $content = $post->content;
-    $img_url = $post->img_url;
-    $created_at = $post->created_at;
-    $date = date('M d, Y', strtotime($created_at));
-
-    ?>
-
     <section class="first">
         <div class="first-container">
-            <?php
-            echo "<img class='blog-img' src='$img_url' alt='$title'>"
-            ?>
+            <img class="blog-img" src="img1.jpg" alt="">
         </div>
     </section>
 
     <section class="second">
         <div class="card">
             <div class="profile">
-                <!-- <div class="profile-img"> -->
-                <?php
-                echo "<img class='profile-img' src='$profile_pic' alt='profile-pic'>"
-                ?>
-                <!-- </div> -->
+                <div class="profile-img"></div>
                 <div class="profile-info">
-                    <span class="name">
-                        <?php
-                        echo $fullname;
-                        ?>
-                    </span>
-                    <span class="username">
-                        <?php
-                        echo $username;
-                        ?>
-                    </span>
+                    <span class="name">Dustin Moskovitz</span>
+                    <span class="username">dustinmoskovitz</span>
+                    <span class="user-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo,
+                        iste!</span>
                 </div>
             </div>
-            <h1 class="card-title">
-                <?php
-                echo substr($title, 0, 20);
-                ?>
-            </h1>
-            <p class="card-body">
-                <?php
-                echo substr($content, 0, 500);
-                ?>
-            </p>
+            <div class="second-container">
+                <div class="profile-link">
+                    <i class="fa-brands fa-square-github"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-square-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="profile-button">
+                    <button class="profile-share">Share</button>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="third">
         <div class="blog-body">
-            <h2 class="sub-title">
-                <?php
-                echo $title;
-                ?>
-            </h2><br>
-            <p>
-                <?php
-                echo $content;
-                ?>
+            <h1 class="blog-title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, fuga.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil deserunt sint cupiditate rerum eos, et
+                illo
+                nesciunt optio quis expedita quo ducimus quas porro commodi dolor modi voluptate maxime sit officia.
+                Quia
+                ullam vitae corporis earum nesciunt rerum minima iure, nulla, qui distinctio nemo, cum excepturi
+                accusantium
+                obcaecati? Earum explicabo distinctio autem officia, assumenda cum qui sapiente nemo rerum! Voluptatem
+                provident tenetur facilis error esse. <br><br> Reiciendis, neque? Quam minus dolorum et quia doloribus
+                aut explicabo
+                eligendi voluptate atque corporis temporibus laboriosam iusto, perspiciatis illo alias fugit sit iure
+                dignissimos, tenetur earum at quidem. Nihil modi blanditiis corporis quidem? Quisquam nisi aspernatur id
+                amet? Debitis est aut aspernatur, eveniet reprehenderit expedita at illum repellendus ipsa, corrupti
+                tempore, iste ut maiores voluptatibus similique modi quaerat quia recusandae odit nesciunt atque quasi
+                consequatur! Fugit ullam accusantium exercitationem quaerat omnis aut, placeat molestiae distinctio
+                porro
+                nam ut reiciendis libero tempore quo soluta id dolores veniam nobis repellat dignissimos reprehenderit
+                cum
+                possimus? Autem inventore laudantium vel doloribus, deserunt sequi consectetur veritatis facere minima
+                non
+                ab sint suscipit sed atque quis corrupti sit asperiores dolorem illo ipsam molestias quae, iste,
+                reiciendis
+                totam. <br><br>
+                Eveniet beatae quae id exercitationem laboriosam, voluptas sint culpa odio ab
+                rerum
+                necessitatibus
+                nemo quasi natus minus consequuntur consectetur distinctio quod fugiat quam animi ea. Qui voluptatem a
+                mollitia molestias perferendis ipsum nemo debitis quas fuga laborum assumenda sed, nobis, velit pariatur
+                incidunt.<br><br>Dolorem, aut? Pariatur tenetur officiis consequatur magni ratione
+                maiores incidunt deserunt
+                non ex
+                ducimus molestiae optio ipsum modi quos voluptas provident dolorum unde veritatis necessitatibus,
+                repellendus et ullam, excepturi impedit enim! Suscipit, impedit culpa! Quibusdam earum beatae unde,
+                distinctio nihil odio veniam eos tempora ullam molestiae expedita. <br><br> Dolores cupiditate
+                voluptatibus
+                asperiores ipsum fugit cum hic ad incidunt quae sunt at expedita itaque eum quod eius tenetur, modi odit
+                minima alias non nobis. Sequi eum molestiae sunt, exercitationem quaerat ad laudantium modi, est tenetur
+                provident ut fugit. Esse libero recusandae temporibus laborum quam, cupiditate explicabo, soluta
+                quisquam
+                dignissimos distinctio non voluptate eius. Quae enim numquam quam nam molestias praesentium unde,
+                facilis
+                laudantium sequi ratione, eligendi qui magnam cupiditate. Accusamus commodi fuga a, suscipit sunt nulla
+                ullam iusto ratione rerum laboriosam quos consequuntur, molestias error nobis, quaerat itaque corrupti
+                adipisci obcaecati odit est dolorem incidunt. Aliquam laborum similique eius illum quas nihil iste odio
+                possimus omnis iure, reiciendis blanditiis dolores fugiat magnam neque asperiores! Voluptate atque
+                nostrum
+                minus tempora libero, eius sapiente? Similique quibusdam veniam veritatis id quisquam, voluptates natus
+                eum
+                debitis sunt pariatur libero reiciendis neque molestias ad aperiam quos expedita rem nihil maxime
+                deserunt! <br><br>
             </p>
         </div>
     </section>
@@ -178,9 +181,7 @@ include_once '../controllers/UserController.php';
 
         </div>
     </section>
-    <?php
-    include_once './components/footer.php';
-    ?>
+
 </body>
 
 </html>
