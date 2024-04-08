@@ -14,3 +14,4 @@ $ERROR_SAVING_USER = 'Error saving user';
 $ERROR_CONNECTING_DB = 'Error connecting to MySQL server';
 $INVALID_CREDENTIALS = 'Invalid credentials';
 $USER_NOT_LOGGED_IN = 'User not logged in';
+$POST_SAVED = 'Post saved';

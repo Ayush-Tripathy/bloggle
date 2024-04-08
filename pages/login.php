@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $username = $_POST['username'];
   $password = $_POST['password'];
 
-  $ret = loginUser($username, $password);
+  $ret = login_user($username, $password);
   $success_redirect = 'landing.php';
   if ($ret) {
     if ($ret === $USER_DOES_NOT_EXIST) {

@@ -63,6 +63,28 @@ class Post
         return $posts;
     }
 
+    public static function find_from_offset($offset, $count)
+    {
+        global $dbc, $POSTS_TABLE, $ERROR_QUERYING_DB;
+        $query = "SELECT * FROM $POSTS_TABLE ORDER BY created_at DESC LIMIT $count OFFSET $offset";
+        $result = mysqli_query($dbc, $query) or die($ERROR_QUERYING_DB);
+        $posts = [];
+        while ($row = mysqli_fetch_array($result)) {
+            $post = new Post(
+                $row['id'],
+                $row['user_id'],
+                $row['title'],
+                $row['content'],
+                $row['image_url'],
+                $row['likes_count'],
+                $row['comments_count'],
+                $row['created_at']
+            );
+            array_push($posts, $post);
+        }
+        return $posts;
+    }
+
     public static function find_by_user_id($user_id)
     {
         global $dbc, $POSTS_TABLE, $ERROR_QUERYING_DB;
@@ -121,5 +143,8 @@ class Post
                         $this->comments_count)";
 
         mysqli_query($dbc, $query) or die($ERROR_SAVING_POST);
+        if (mysqli_error($dbc)) {
+            echo mysqli_error($dbc);
+        }
     }
 }

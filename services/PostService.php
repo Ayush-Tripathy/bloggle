@@ -2,7 +2,7 @@
 include_once '../models/Post.php';
 include_once '../constants/db_vars.php';
 
-function savePost(
+function save_post(
     $user_id,
     $title,
     $content,
@@ -35,7 +35,12 @@ function savePost(
     return $POST_SAVED;
 }
 
-function getPosts(DateTime $start = null, DateTime $end = null, int $count = null)
+function get_posts(DateTime $start = null, DateTime $end = null, int $count = null)
 {
     return Post::find_all($start, $end, $count);
+}
+
+function get_posts_from_offset($offset, $count)
+{
+    return Post::find_from_offset($offset, $count);
 }

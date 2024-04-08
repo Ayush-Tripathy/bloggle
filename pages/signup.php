@@ -131,7 +131,7 @@ include_once '../controllers/UserController.php';
       return;
     }
 
-    $ret = registerUser($username, $password, $email, $fullname, null, null);
+    $ret = register_user($username, $password, $email, $fullname, null, null);
     if ($ret) {
       if ($ret === $USERNAME_EXISTS)
         echo "<script>window.location.href = 'signup.php?error=username_exists';</script>";

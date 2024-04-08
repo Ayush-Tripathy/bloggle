@@ -1,3 +1,11 @@
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 300,
+        'GRAD' 0,
+        'opsz' 12
+}
+
 .section__landing {
     display: flex;
     flex-direction: column;
@@ -231,4 +239,21 @@
     text-align: center;
     border-radius: 25px;
     color: var(--color-text-dark);
+}
+
+@media screen and (max-width: 768px) {
+    .section__explore .posts__container .sidepanel {
+        display: none;
+    }
+
+    .section__explore .posts__container .posts__column {
+        flex: 1;
+    }
+
+}
+
+@media screen and (max-width: 430px) {
+    .section__explore .posts__wrapper .posts__gutter {
+        width: 0;
+    }
 }
