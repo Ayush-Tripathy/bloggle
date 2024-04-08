@@ -61,7 +61,7 @@
             <div class="social-networks">
                 <span><a href="https://www.instagram.com/srijayditya"><ion-icon name="logo-instagram"></ion-icon></a></span>
                 <span><a href="https://www.linkedin.com/in/srijay-nanda-667305276/"><ion-icon name="logo-linkedin"></ion-icon></a></span>
-                <span><a href=""><ion-icon name="logo-github"></ion-icon></a></span>
+                <span><a href="https://github.com/srijayditya"><ion-icon name="logo-github"></ion-icon></a></span>
             </div>
         </div>
         <div class="quote-card card">

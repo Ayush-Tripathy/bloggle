@@ -21,7 +21,30 @@ include_once '../controllers/UserController.php';
 
     <?php include_once './components/Navbar.php'; ?>
 
-    <section class="first">
+    <div class="first-part">
+    
+        <div class="profile-header">
+            <div class="image-section">
+                <img src="./catttttt.jpeg" alt="">
+            </div>
+            <div class="about-section">
+                <div class="name">
+                    Bismay Sarangi
+                </div>
+                <div class="userid">
+                    b._.smay
+                </div>
+                <div class="bio">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus eveniet porro reprehenderit aliquam similique reiciendis officia distinctio doloremque corrupti! Quae, quo hic culpa reiciendis, accusantium aperiam voluptas soluta illo nisi, saepe non expedita dicta dignissimos! Natus nobis quia, cum modi ad eligendi quasi totam aut consequuntur molestias excepturi enim soluta.
+                </div>
+            </div>
+        </div>
+        <div class="all-posts">
+            SEE ALL POSTS
+        </div>
+    </div>
+    <!-- <section class="first">
+    
 
         <div class="container">
 
@@ -91,7 +114,7 @@ include_once '../controllers/UserController.php';
 
         </div>
 
-    </section>
+    </section> -->
 
     <section class="three">
 
@@ -107,7 +130,7 @@ include_once '../controllers/UserController.php';
 
                 <div class="read-more-body">
 
-                    <span class="username">dustinmoskovitz</span>
+                    <!-- <span class="username">dustinmoskovitz</span> -->
 
                     <a href="#" class="read-more-heading">Lorem ipsum dolor sit amet.</a>
 
@@ -119,7 +142,7 @@ include_once '../controllers/UserController.php';
 
                     </p>
 
-                    <a href="#">Read More</a>
+                    <!-- <a href="#">Read More</a> -->
 
                 </div>
 
@@ -134,7 +157,7 @@ include_once '../controllers/UserController.php';
                 <div class="read-more-body">
 
 
-                    <span class="username">dustinmoskovitz</span>
+                    <!-- <span class="username">dustinmoskovitz</span> -->
 
                     <a href="#" class="read-more-heading">Lorem ipsum dolor sit amet.</a>
 
@@ -145,7 +168,7 @@ include_once '../controllers/UserController.php';
                         provident assumenda.
                     </p>
 
-                    <a href="#">Read More</a>
+                    <!-- <a href="#">Read More</a> -->
 
                 </div>
 
@@ -158,7 +181,7 @@ include_once '../controllers/UserController.php';
 
                 <div class="read-more-body">
 
-                    <span class="username">dustinmoskovitz</span>
+                    <!-- <span class="username">dustinmoskovitz</span> -->
 
                     <a href="#" class="read-more-heading">Lorem ipsum dolor sit amet.</a>
 
@@ -174,7 +197,7 @@ include_once '../controllers/UserController.php';
                     </p>
 
 
-                    <a href="#">Read More</a>
+                    <!-- <a href="#">Read More</a> -->
 
                 </div>
 
@@ -189,7 +212,7 @@ include_once '../controllers/UserController.php';
 
                 <div class="read-more-body">
 
-                    <span class="username">dustinmoskovitz</span>
+                    <!-- <span class="username">dustinmoskovitz</span> -->
 
                     <a href="#" class="read-more-heading">Lorem ipsum dolor sit amet.</a>
 
@@ -200,7 +223,7 @@ include_once '../controllers/UserController.php';
                         provident assumenda.
                     </p>
 
-                    <a href="#">Read More</a>
+                    <!-- <a href="#">Read More</a> -->
 
                 </div>
 
