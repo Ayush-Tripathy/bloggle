@@ -1,19 +1,8 @@
-@font-face {
-    font-family: SourceSerif4;
-    src: url(Source_Serif_4/static/SourceSerif4-Regular.ttf);
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    font-family: SourceSerif4;
-}
-
 header {
-    background: #adc099;
+    background: var(--color-primary);
 }
 
-.navbar {
+/* .navbar {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -21,6 +10,10 @@ header {
     margin: auto;
     max-width: 80vw;
     height: 70px;
+} */
+
+.navbar {
+    border-bottom: none !important;
 }
 
 .blog-logo {
@@ -139,7 +132,7 @@ header {
     line-height: 25px;
 }
 
-.second-container{
+.second-container {
     width: auto;
     display: flex;
     flex-direction: row;
@@ -147,7 +140,7 @@ header {
     padding: 14px 10px;
 }
 
-.profile-link{
+.profile-link {
     /* background-color: wheat; */
     width: auto;
     display: flex;
@@ -157,13 +150,13 @@ header {
 }
 
 
-.profile-button{
+.profile-button {
     display: flex;
     padding: 0 30px;
     /* background-color: #adc099; */
 }
 
-.profile-share{
+.profile-share {
     width: 130px;
     height: 50px;
     border-radius: 6px;
@@ -172,24 +165,24 @@ header {
 
 }
 
-.fa-brands{
+.fa-brands {
     font-size: 34px;
 }
 
-.fa-square-github{
+.fa-square-github {
     color: #2b3137;
 }
 
-.fa-linkedin{
+.fa-linkedin {
     color: #0077B5;
 }
 
-.fa-square-twitter{
+.fa-square-twitter {
     color: skyblue;
 }
 
-.fa-instagram{
-    color: 	#C13584;
+.fa-instagram {
+    color: #C13584;
 }
 
 .name,
@@ -433,7 +426,7 @@ header {
         padding: 25px 20px;
     }
 
-    .blog-title{
+    .blog-title {
         font-size: 28px;
     }
 
