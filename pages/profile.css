@@ -1,16 +1,97 @@
-body {
+/* body {
     background-color: rgb(255, 255, 255);
     padding: 0%;
     display: card;
 
+} */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-@font-face {
+ @font-face {
     font-family: SourceSerif4;
     src: url(Source_Serif_4/static/SourceSerif4-Regular.ttf);
+} 
+
+body {
+    overflow-x: hidden;
+    /* margin-left: 5%;
+    margin-right: 5%; */
 }
 
+.first-part {
+    margin-left: 5%;
+    margin-right: 5%;
+}
 
+.profile-header {
+    /* margin: 5%; */
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    margin-top: 4%;
+    /* margin-left: 4%;
+    margin-right: 4%; */
+}
+
+.image-section {
+    padding: 15px;
+}
+
+.image-section img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about-section {
+    padding-left: 2.5%;
+    padding-top: 15px
+}
+
+.name {
+    font-weight: 800;
+    font-size: 1.5em;
+    margin-bottom: 1%;
+}
+
+.userid {
+    font-weight: 550;
+    font-size: 1.2em;
+    margin-bottom: 0.5%;
+}
+
+.bio {
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.all-posts {
+    text-align: center;
+    border: 1px solid black;
+    margin-bottom: 5%;
+    border-top: none;
+}
+
+@media only screen and (min-width: 350px) and (max-width: 600px) {
+    .about-section .name {
+        font-size: 13px;
+    }
+
+    .about-section .userid {
+        font-size: 11px;
+    }
+
+    .about-section .bio {
+        font-size: 11px;
+    }
+}
+
+/*
 .container {
     display: flex;
     background-color: white;
@@ -106,7 +187,14 @@ p {
     margin: 20px 0px;
     flex-wrap: wrap;
 
-}
+} */
+
+/* .three {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+} */
 
 
 .read-more {
@@ -196,3 +284,4 @@ p {
     transition: all ease 0.3s;
 
 }
+
