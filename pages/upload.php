@@ -45,12 +45,11 @@ include_once '../controllers/UserController.php';
                     </label>
                     <input type="file" name="fileToUpload" id="fileToUpload">
                 </div>
-                <div class="last-part">
-                    <button type="submit" id="upload-btn">Post</button>
-                </div>
             </form>
         </div>
-
+        <div class="last-part">
+            <button type="submit" id="upload-btn">Post</button>
+        </div>
     </div>
 
     <script type="module">

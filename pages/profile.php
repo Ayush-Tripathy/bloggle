@@ -40,6 +40,7 @@ include_once '../controllers/UserController.php';
                         <h1>@Aryan.Raj_59 </h1>
 
                         <div class="bio">
+
                             <h4>
 
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nemo numquam vel cumque ullam
@@ -72,11 +73,13 @@ include_once '../controllers/UserController.php';
 
             </div>
 
+
     </section>
 
     <section class="second">
 
         <div class="post_heading">
+
 
             <div class="content_of_the_box">
 
@@ -99,6 +102,7 @@ include_once '../controllers/UserController.php';
 
                 <div class="read-more-img"><img src="DP.jpg" alt="">
 
+
                 </div>
 
                 <div class="read-more-body">
@@ -106,11 +110,13 @@ include_once '../controllers/UserController.php';
                     <span class="username">dustinmoskovitz</span>
 
                     <a href="#" class="read-more-heading">Lorem ipsum dolor sit amet.</a>
+
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur libero impedit hic voluptas
                         eligendi quae tenetur obcaecati atque doloribus earum porro dolores maxime nostrum doloremque
                         molestias aspernatur reprehenderit, nulla id. Illo aliquid, quae architecto quidem vero
                         molestias voluptatum aspernatur fugiat omnis quam consequatur blanditiis aperiam, repellendus
                         veniam laboriosam obcaecati recusandae.
+
                     </p>
 
                     <a href="#">Read More</a>
@@ -126,6 +132,7 @@ include_once '../controllers/UserController.php';
                 </div>
 
                 <div class="read-more-body">
+
 
                     <span class="username">dustinmoskovitz</span>
 
@@ -166,9 +173,11 @@ include_once '../controllers/UserController.php';
                         illum?
                     </p>
 
+
                     <a href="#">Read More</a>
 
                 </div>
+
 
             </div>
 
@@ -199,12 +208,15 @@ include_once '../controllers/UserController.php';
 
 
 
+
         </div>
 
     </section>
 
+
     <?php
     include_once './components/footer.php';
+
     ?>
 
 

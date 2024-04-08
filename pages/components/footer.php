@@ -11,11 +11,11 @@ import_css('./components/footer.css');
         </div>
         <div class="footer-pages-links">
             <h3>QUICK LINKS</h3>
-            <div class="home-page"><a href="#">Home</a></div>
-            <div class="login-page"><a href="#">Sign up/Log in</a></div>
-            <div class="post-page"><a href="#">Post</a></div>
-            <div class="search-page"><a href="#">Search</a></div>
-            <div class="credits-page"><a href="#">Credits</a></div>
+            <div><a href="./landing.php">Home</a></div>
+            <div><a href="./signup.php">Sign up</a></div>
+            <div><a href="./login.php">Log in</a></div>
+            <div><a href="./upload.php">Post</a></div>
+            <div><a href="./credits.php">Credits</a></div>
         </div>
     </div>
     <div class="footer-ending-line">
