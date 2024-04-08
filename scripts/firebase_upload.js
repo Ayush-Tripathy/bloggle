@@ -15,7 +15,7 @@ const firebaseConfig = {
     measurementId: env['FIREBASE_MEASUREMENT_ID']
 };
 
-export async function uploadImage(fileInput, phpPostPath, postTitle, postContent) {
+export async function uploadImage(fileInput) {
     const file = fileInput.files[0];
     if (!file) {
         console.error("No file selected");
@@ -35,17 +35,9 @@ export async function uploadImage(fileInput, phpPostPath, postTitle, postContent
 
     await uploadBytes(storageRef, file).then((snapshot) => {
         const filename = snapshot.metadata.fullPath;
-        const url = `https://firebasestorage.googleapis.com/v0/b/blog-project-417316.appspot.com/o/${filename}?alt=media`;
-        const xhr = new XMLHttpRequest();
-        xhr.open("POST", phpPostPath, false); // false makes the request synchronous
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
-                // console.log(this.responseText);
-                returnValue = true;
-            }
-        };
-        xhr.send(`title=${postTitle}&content=${postContent}&imageurl=${url}`);
+        const url = `https://firebasestorage.googleapis.com/v0/b/blogproject-83902.appspot.com/o/${filename}?alt=media`;
+
+        returnValue = url;
     }).catch((error) => {
         console.error(error);
         returnValue = false;

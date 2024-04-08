@@ -3,7 +3,7 @@
 include_once '../controllers/UserController.php';
 
 if (isset($_SESSION['user'])) {
-    logoutUser();
+    logout_user();
     header('Location: login.php');
     // echo 'Logged out';
 } else {

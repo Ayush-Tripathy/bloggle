@@ -17,7 +17,7 @@
 }
 
 .navbar .navbar__el .navbar__el__text {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-md);
     color: var(--color-text-dark);
     text-decoration: none;
 }

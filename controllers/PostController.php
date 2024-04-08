@@ -7,26 +7,38 @@ include_once '../pages/utils/utils.php';
 include_once '../services/PostService.php';
 
 
-function uploadPost($title, $content, $img_url)
+function upload_post($title, $content, $img_url)
 {
-    global $USER_NOT_LOGGED_IN;
+    global $USER_NOT_LOGGED_IN, $POST_SAVED;
 
     if (!isset($_SESSION['user'])) {
         return $USER_NOT_LOGGED_IN;
     }
     $user = $_SESSION['user'];
     $user_id = $user['id'];
-    // echo "User id: $user_id<br>";
-    $ret = savePost($user_id, $title, $content, $img_url);
+
+    $ret = save_post($user_id, $title, $content, $img_url);
+
+    // Increment the user's post count
+    if ($ret === $POST_SAVED) {
+        $user_ = User::find_by_id($user_id);
+        $user_->posts_count++;
+        $user_->save();
+    }
     return $ret;
 }
 
-function getPostsFromBefore(DateTime $end = NULL, int $count = NULL)
+function get_posts_from_before(DateTime $end = NULL, int $count = NULL)
 {
-    return getPosts(NULL, $end, $count);
+    return get_posts(NULL, $end, $count);
 }
 
-function getPostsFromAfter(DateTime $start = NULL, int $count = NULL)
+function get_posts_from_after(DateTime $start = NULL, int $count = NULL)
 {
-    return getPosts($start, NULL, $count);
+    return get_posts($start, NULL, $count);
+}
+
+function get_posts_oc($offset, $count)
+{
+    return get_posts_from_offset($offset, $count);
 }

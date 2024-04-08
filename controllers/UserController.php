@@ -11,7 +11,7 @@ include_once '../pages/utils/utils.php';
 
 
 
-function registerUser(
+function register_user(
     string $username,
     string $password,
     string $email,
@@ -38,7 +38,7 @@ function registerUser(
     ];
 
     $_SESSION['user'] = $user;
-    return saveUser(
+    return save_user(
         $username,
         $password,
         $email,
@@ -49,7 +49,7 @@ function registerUser(
     );
 }
 
-function loginUser($username, $password)
+function login_user($username, $password)
 {
     global $USER_DOES_NOT_EXIST, $INVALID_CREDENTIALS;
     $user = User::find_by_username($username);
@@ -74,7 +74,7 @@ function loginUser($username, $password)
     return $INVALID_CREDENTIALS;
 }
 
-function logoutUser()
+function logout_user()
 {
     session_unset();
     session_destroy();

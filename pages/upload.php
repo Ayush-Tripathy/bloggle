@@ -48,31 +48,9 @@ include_once '../controllers/UserController.php';
             </form>
         </div>
         <div class="last-part">
-
             <button type="submit" id="upload-btn">Post</button>
         </div>
     </div>
-
-    <?php
-    include_once '../controllers/PostController.php';
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        echo "POST request received";
-
-        $imageUrl = $_POST['imageurl'];
-        $postTitle = $_POST['title'];
-        $postContent = $_POST['content'];
-
-        $ret = uploadPost($postTitle, $postContent, $imageUrl);
-        if ($ret) {
-            echo "POST uploaded successfully";
-            echo "<script>console.log('$ret');</script>";
-            // echo "<script>window.location.href = 'landing.php';</script>";
-        } else {
-            echo "POST upload failed";
-            echo "<script>console.log('Post upload failed');</script>";
-        }
-    }
-    ?>
 
     <script type="module">
         import {
@@ -100,10 +78,52 @@ include_once '../controllers/UserController.php';
             }
 
             // const file = fileInput.files[0];
-            const ret = await uploadImage(fileInput, "upload.php", postTitle.value, postCaption.value);
+            const ret = await uploadImage(fileInput);
 
             if (ret) {
-                console.log('Image uploaded successfully');
+                // console.log('Image uploaded successfully');
+
+                // const xhr = new XMLHttpRequest();
+                // xhr.open('POST', 'upload_post_meta_data.php', false);
+                // xhr.setRequestHeader('Content-Type', 'multipart/form-data');
+                // xhr.onreadystatechange = function() {
+                //     if (xhr.readyState == 4 && xhr.status == 200) {
+                //         if (xhr.responseText === 'SUCCESS') {
+                //             console.log('Post uploaded successfully');
+                //             // window.location.href = 'landing.php';
+                //         } else {
+                //             console.log('Post upload failed');
+                //             alert('Post upload failed, please try again later.');
+                //         }
+                //     }
+                // }
+                // // xhr.send(`imageurl=${ret}&title=${postTitle.value}&content=${postCaption.value}&file=${fileInput}`);
+                // xhr.send(formData);
+
+                const formData = new FormData();
+                formData.append('imageurl', ret);
+                formData.append('title', postTitle.value);
+                formData.append('content', postCaption.value);
+
+                const response = await fetch('upload_post_meta_data.php', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    const data = await response.text();
+                    if (data === 'SUCCESS') {
+                        console.log('Post uploaded successfully');
+                        window.location.href = 'landing.php';
+                    } else {
+                        console.log('Post upload failed');
+                        alert('Post upload failed, please try again later.');
+                    }
+                } else {
+                    console.log('Post upload failed');
+                    alert('Post upload failed, please try again later.');
+                }
+
             } else {
                 console.log('Image upload failed');
             }
