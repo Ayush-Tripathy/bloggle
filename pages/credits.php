@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.jpg" type="image/jpg">
     <title>Credits</title>
-    <?php 
-        include_once './utils/utils.php';
-        import_css('../assets/css/main.css');
-        import_css('./credits-styles.css');
+    <?php
+    include_once './utils/utils.php';
+    import_css('../assets/css/main.css');
+    import_css('./credits-styles.css');
     ?>
 </head>
+
 <body>
     <!-- Adding Loading Animation for better User Experience -->
     <div class="loading-overlay">
@@ -70,11 +73,11 @@
             </p>
         </div>
     </div>
-    <?php 
-        include_once './components/footer.php';
+    <?php
+    include_once './components/footer.php';
     ?>
     <script>
-        window.addEventListener('load', function () {
+        window.addEventListener('load', function() {
             var loadingOverlay = document.querySelector('.loading-overlay');
             loadingOverlay.style.display = 'none';
         });
@@ -82,4 +85,5 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>

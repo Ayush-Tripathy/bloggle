@@ -8,6 +8,7 @@ include_once '../controllers/UserController.php';
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.jpg" type="image/jpg">
   <title>Bloggle - Sign Up</title>
   <?php
   include_once './utils/utils.php';
