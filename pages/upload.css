@@ -108,5 +108,24 @@ button {
     #caption::placeholder {
         font-size: 15px;
     }
+
+    .file-upload {
+        margin-top: 10px;
+        text-align: center; 
+    }
+
+    .last-part {
+        margin-top: 20px;
+        /* justify-content: center;  */
+    }
 }
+
+@media only screen and (min-width: 400px) and (max-width: 768px) {
+    .file-upload {
+        position: fixed;
+    }
+
+}
+
+
 
