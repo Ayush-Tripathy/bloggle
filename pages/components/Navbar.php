@@ -1,5 +1,7 @@
 <?php
 import_css('./components/Navbar.css');
+
+$username = isset($_SESSION['user']) ? $_SESSION['user']['username'] : "";
 $navbar_unauthorized =
     "
         <nav class='navbar'>
@@ -37,7 +39,7 @@ $navbar_authorized =
                     Post
                     <img src='components/tool.png' alt='post-btn' style='width: 17.5px; height: 17.5px; object-fit: contain;'>
                 </a>
-                <a href='profile.php?user=" . $_SESSION['user']['username'] . "' class='navbar__el__text'>
+                <a href='profile.php?user=" . $username . "' class='navbar__el__text'>
                     Profile
                 </a>
                 <a href='logout.php' class='btn__primary'>
