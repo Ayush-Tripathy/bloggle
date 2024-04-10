@@ -106,7 +106,7 @@ include_once '../controllers/UserController.php';
     <section class="third">
         <div class="blog-body">
             <h1 class="blog-title"><?php echo $title; ?></h1>
-            <p><?php echo $content; ?></p>
+            <p class="post-body"><?php echo $content; ?></p>
         </div>
     </section>
 

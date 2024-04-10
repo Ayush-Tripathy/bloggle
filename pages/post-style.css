@@ -12,6 +12,11 @@ header {
     height: 70px;
 } */
 
+.post-body {
+    /* Include white spaces and newlines. */
+    white-space: pre-wrap;
+}
+
 .navbar {
     border-bottom: none !important;
 }

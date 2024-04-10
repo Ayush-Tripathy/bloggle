@@ -102,6 +102,14 @@ body {
     .about-section .bio {
         font-size: 11px;
     }
+
+    
+    .image-section img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
 }
 
 /*
