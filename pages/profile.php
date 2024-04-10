@@ -28,6 +28,15 @@ include_once '../controllers/UserController.php';
     include_once '../models/User.php';
     include_once '../models/Post.php';
 
+    $logged_in = false;
+    if (isset($_SESSION['user'])) {
+        $logged_in_user = $_SESSION['user'];
+        $logged_in = true;
+        echo "<script>console.log('User is logged in as: " . $logged_in_user['username'] . "')</script>";
+    } else {
+        echo "<script>console.log('User is not logged in')</script>";
+    }
+
     if (!isset($_GET['user'])) {
         return;
     }
@@ -79,12 +88,17 @@ include_once '../controllers/UserController.php';
                 <textarea id="bio" class="bio" contenteditable="false" readonly>
                     <?php echo $bio; ?>
                 </textarea>
-                <div class="edit-bio" id="edit-bio">
-                    <span class="material-symbols-outlined">
-                        edit_square
-                    </span>
-                    <span>Edit Bio</span>
-                </div>
+                <?php
+                if ($logged_in && $logged_in_user['username'] === $username) {
+                ?>
+                    <div class="edit-bio" id="edit-bio">
+                        <span class="material-symbols-outlined">
+                            edit_square
+                        </span>
+                        <span>Edit Bio</span>
+                    </div>
+                <?php
+                } ?>
             </div>
         </div>
         <div class="all-posts">

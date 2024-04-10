@@ -129,9 +129,24 @@ class Post
         return $post;
     }
 
+    private static function sanitize($str)
+    {
+        $str = htmlspecialchars(strip_tags($str));
+        $str = str_replace("'", "\'", $str);
+        $str = str_replace('"', '\"', $str);
+        $str = str_replace('`', '\`', $str);
+        $str = str_replace('\\', '\\\\', $str);
+        return $str;
+    }
+
     public function save()
     {
         global $dbc, $POSTS_TABLE, $ERROR_SAVING_POST;
+
+        $this->title = $this->sanitize($this->title);
+        $this->content = $this->sanitize($this->content);
+        $this->img_url = $this->sanitize($this->img_url);
+
         $query = "INSERT INTO $POSTS_TABLE (
                 user_id, title, content, image_url, likes_count, comments_count) 
                     VALUES (
